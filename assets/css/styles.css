@@ -1,0 +1,301 @@
+/* Import Google Font 'Poiret One' */
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+/* Reseteo básico para mejor consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos de texto base */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poiret One', cursive, helvetica;
+}
+
+/* Estilos de Navegación */
+nav {
+    background-color: #6d0055;
+    padding: 10px;
+    background: linear-gradient(to right, #6d0055 0%, #8367C7 70%);
+    opacity: 0.8;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de Cabecera */
+.header {
+    font-family: 'Poiret One', cursive, helvetica;
+    color: white;
+    text-align: center;
+    /*filtro para aplicar sombra a un objeto clipped*/
+    filter: drop-shadow(0px 6px 10px rgba(50, 0, 43, 0.5));  
+}
+
+.header .clipper {
+    background-color: #6d0055;
+    height: 80vh;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	max-width: 100%;
+	position: relative;
+    clip-path: polygon(100% 0, 100% 77%, 50% 100%, 0 75%, 0 0);
+}
+
+.header h1 {
+    font-size: 5rem;
+    text-shadow: 0 3px 6px rgba(53, 0, 48, 0.5);
+}
+
+.header p {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 2px rgba(53, 0, 48, 0.5);
+}
+
+.overlay {
+    background-color: rgba(248, 19, 210, 0.144);
+    height: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para el título principal */
+.main-title {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Estilos para la sección del menú */
+#redes {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los títulos de secciones con imagen */
+h2 {
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+/* Parallax */
+.seccionDulces {
+    background-color: #6d0055;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* El efecto consiste en usar unicamente una propiedad (background-attachment) en su valor fixed, lo que fija la imagen al viewport y produce el efecto falso Parallax al hacer Scroll */
+
+#dulces {
+    background-image: url(../img/bg01.jpg);
+}
+
+#dulces-2 {
+    background-image: url(../img/bg-02.jpg);
+}
+
+/* Estilo para los títulos de secciones */
+.section-title h2 {
+    color: #bd39a0;
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #8fe2bf;
+    padding-bottom: 5px;
+}
+
+/* Estilo para la lista de menú */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Estilo para las redes */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/icons-sprite.jpg);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  .icon:hover {
+    transform: scale(1.1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Estilos para el texto descriptivo */
+.description {
+    display: none; /* Ocultamos el texto por defecto */
+    margin-top: 0; /* Separa el texto del icono */
+    font-size: 1rem;
+    position: absolute; /* Para posicionar el texto */
+    margin-left: -10%;
+  }
+  
+  /* Mostramos el texto descriptivo al hacer hover */
+  .social-links a {
+    position: relative;
+  }
+  .social-links a:hover .description {
+    display: block;
+  }
+  
+.icon-ig{
+background-position: 0 0;
+}
+
+.icon-tw{
+background-position: -80px 0;
+}
+
+.icon-fb {
+    background-position: -40px 0;
+}
+
+.icon-yt{
+background-position: -0px -40px;
+}
+
+.icon-li{
+    background-position: -80px -40px;
+}
+
+.icon-sn{
+background-position: -120px -40px;
+}
+
+.icon-wh {
+    background-position: -40px -40px;
+}
+
+.icon-and{
+background-position: -120px 0;
+}
+
+.icon-ig:hover{
+    background-position: 0 -80px;
+    filter: brightness(1.2); 
+    transform: scale(1.1);
+    }
+    
+    .icon-tw:hover{
+    background-position: -80px -80px;
+    }
+    
+    .icon-fb:hover {
+        background-position: -40px -80px;
+    }
+    
+    .icon-yt:hover{
+    background-position: -0px -120px;
+    }
+    
+    .icon-li:hover{
+        background-position: -80px -120px;
+    }
+    
+    .icon-sn:hover{
+    background-position: -120px -120px;
+    }
+    
+    .icon-wh:hover {
+        background-position: -40px -120px;
+    }
+    
+    .icon-and:hover{
+    background-position: -120px -80px;
+    }
+
+/* Estilos para la sección de contacto */
+#contact {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo para resaltar información */
+.highlight {
+    color: #007841;
+    font-weight: bold;
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #007841;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de Pie de Página */
+.footer {
+    background-color:#6d0055;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
